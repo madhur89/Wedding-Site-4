@@ -1,0 +1,126 @@
+<div class="job-application-form">
+    <h2>Job Application Form</h2>
+    <p>Fill out the form below to apply for a job.</p>
+    
+    <label>Your Full Name (required)</label>
+    [text* your-name placeholder "Enter your full name"]
+
+    <label>Your Email (required)</label>
+    [email* your-email placeholder "Enter your email"]
+
+    <label>Phone Number</label>
+    [tel your-phone placeholder "Enter your phone number"]
+
+    <label>Position Applying For (required)</label>
+    [select* position-applying-for "Select the position you are applying for"
+      "Creative Designer"
+      "Website Developer"
+      "Intern"
+      "Marketing Manager"]
+<!-- creative Designer -->
+    <div class="additional-fields" id="additional-fields" style="margin-top: 2%;">
+        <div data-option="Creative Designer" style="display: none; margin-bottom: 2%;">
+            <label>If you could redesign a famous logo from scratch, which one would it be and what changes would you make to give it a fresh new look?</label>
+            [text question1 placeholder "Write Your Answer"]
+        </div>
+
+        <div data-option="Creative Designer" style="display: none; margin-bottom: 2%">
+            <label>If you had to create a new font style that represents our agency's personality, what would it look like and why?</label>
+            [text question1 placeholder "Write Your Answer"]
+        </div>
+
+        <div data-option="Creative Designer" style="display: none; margin-bottom: 2%">
+            <label>If you could turn our office space into a work of art, what would it look like?</label>
+            [text question1 placeholder "Write Your Answer"]
+        </div>
+<!--Website Developer -->
+        <div data-option="Website Developer" style="display: none; margin-bottom: 2%">
+            <label>If websites could talk, what do you think ours would say about itself?</label>
+            [text question2 placeholder "Enter your question for Option 2"]
+        </div>
+
+        <div data-option="Website Developer" style="display: none; margin-bottom: 2%">
+            <label>If you had to build a website for a fictional character, who would it be and what features would you include to reflect their personality?</label>
+            [text question2 placeholder "Enter your question for Option 2"]
+        </div>
+
+        <div data-option="Website Developer" style="display: none; margin-bottom: 2%">
+            <label>If our agency's website were a theme park attraction, which one would it be and why?</label>
+            [text question2 placeholder "Enter your question for Option 2"]
+        </div>
+
+<!-- Intern -->
+<div data-option="Intern" style="display: none; margin-bottom: 2%">
+            <label>If you were tasked with creating a guerrilla marketing campaign on a shoestring budget, what creative tactics would you employ?</label>
+            [text question3 placeholder "Write Your Answer"]
+        </div>
+
+        <div data-option="Intern" style="display: none; margin-bottom: 2%">
+            <label>If you were to create a viral TikTok challenge for our agency, what would it entail?</label>
+            [text question3 placeholder "Write Your Answer"]
+        </div>
+
+        <div data-option="Intern" style="display: none; margin-bottom: 2%">
+            <label> If you could swap roles with any team member for a day, who would it be and why? </label>
+            [text question3 placeholder "Write Your Answer"]
+        </div>
+
+        
+<!-- Marketing Manager: -->
+
+        <div data-option="Marketing Manager" style="display: none; margin-bottom: 2%">
+            <label>If you were given a magic wand that could instantly solve one marketing challenge our agency faces, what would it be and why?</label>
+            [text question4 placeholder "Write Your Answer"]
+        </div>
+
+        <div data-option="Marketing Manager" style="display: none; margin-bottom: 2%">
+            <label>If you could have a billboard anywhere in the world to promote our agency, where would it be and what message would it convey?</label>
+            [text question4 placeholder "Write Your Answer"]
+        </div>
+
+        <div data-option="Marketing Manager" style="display: none; margin-bottom: 2%">
+            <label>If you could travel back in time to witness the launch of any iconic marketing campaign, which one would it be and why?</label>
+            [text question4 placeholder "Write Your Answer"]
+        </div>
+
+        <div data-option="Marketing Manager" style="display: none; margin-bottom: 2%">
+            <label>Is there any one brand campaign that left an impression on you? What was it?</label>
+            [text question4 placeholder "Write Your Answer"]
+        </div>
+
+
+    </div>
+
+
+
+
+    <label>Resume/CV (PDF or Word Document only, max 5MB)</label>
+    [file resume-cv filetypes:pdf|doc|docx limit:5mb]
+
+    <!-- <label>Additional Information</label>
+    [textarea additional-info placeholder "Provide any additional information"]
+
+    <label>How did you hear about us?</label>
+    [text referrer placeholder "Enter how you heard about us"] -->
+
+    <p>[submit "Submit"]</p>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var positionSelect = document.querySelector('select[name="position-applying-for"]');
+        var additionalFields = document.getElementById('additional-fields').querySelectorAll('[data-option]');
+
+        positionSelect.addEventListener('change', function() {
+            var selectedOption = positionSelect.value;
+            
+            additionalFields.forEach(function(field) {
+                if (field.dataset.option === selectedOption) {
+                    field.style.display = 'block';
+                } else {
+                    field.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>

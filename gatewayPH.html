@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhonePe Payment Gateway</title>
+</head>
+<body>
+    <h1>aPLI_FDllabck</h1>
+    <button id="initPaymentButton">Initialize Payment</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#initPaymentButton').click(function() {
+                initializePayment();
+            });
+        });
+
+        function initializePayment() {
+            var merchantId = 'PGTESTPAYUAT'; // Replace with your PhonePe Merchant ID
+            var orderId = generateOrderId(); // You may generate order ID dynamically as per your requirement
+            var amount = 100; // Replace with actual amount in cents
+
+            var phonepeUrl = 'https://api-preprod.phonepe.com/apis/hermes';
+
+            var payload = {
+                "merchantId": merchantId,
+                "merchantOrderId": orderId,
+                "transactionAmount": amount,
+                "transactionCurrency": "INR",
+                "responseUrl": window.location.href // URL where PhonePe will redirect after payment completion
+            };
+
+            $.ajax({
+                url: phonepeUrl,
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(payload),
+                success: function(response) {
+                    window.location.href = response.paymentUrl;
+                },
+                error: function(xhr, status, error) {
+                    alert('Error initializing payment. Please try again later.');
+                }
+            });
+        }
+
+        function generateOrderId() {
+            // Simple function to generate a random order ID
+            return 'ORDER_' + Math.random().toString(36).substr(2, 9);
+        }
+    </script>
+</body>
+</html>

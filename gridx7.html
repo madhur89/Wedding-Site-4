@@ -1,0 +1,366 @@
+<style>
+  @charset "UTF-8";
+
+  @font-face {
+    font-family: slick;
+    font-weight: 400;
+    font-style: normal;
+    src: url(/_next/static/media/slick.25572f22.eot);
+    src: url(/_next/static/media/slick.25572f22.eot?#iefix)
+        format("embedded-opentype"),
+      url(/_next/static/media/slick.653a4cbb.woff) format("woff"),
+      url(/_next/static/media/slick.6aa1ee46.ttf) format("truetype"),
+      url(/_next/static/media/slick.f895cfdf.svg#slick) format("svg");
+  }
+
+  .category_section-area__UewGt {
+    padding-top: 10vw;
+    padding-bottom: 10vw;
+  }
+
+  .category_section-title__MlXHf {
+    margin: 0;
+    color: #333;
+    text-align: center;
+    font-size: 7vw;
+    font-weight: 500;
+  }
+
+  @media (min-width: 768px) {
+    .category_section-title__MlXHf {
+      font-size: 5vw;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .category_section-area__UewGt {
+      padding-top: 3vw;
+      padding-bottom: 3vw;
+    }
+
+    .category_section-title__MlXHf {
+      font-size: 2.2rem;
+    }
+  }
+
+  .category_gird-container__VMjQ7 {
+    width: 100%;
+    margin-top: 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .category_gird-container__VMjQ7 .category_grid-item__O9vRh {
+    width: 48.5%;
+    min-height: 20px;
+    margin-bottom: 3%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .category_gird-container__VMjQ7 .category_grid-item__O9vRh a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+
+  .category_gird-container__VMjQ7 .category_grid-item__O9vRh img {
+    width: 100%;
+    margin-top: auto;
+    transition: all 0.5s;
+  }
+
+  .category_gird-container__VMjQ7 .category_grid-item__O9vRh img:hover {
+    transform: scale(1.1);
+  }
+
+  .category_gird-container__VMjQ7
+    .category_grid-item__O9vRh.category_category-no-data__Ks_Ox {
+    display: none;
+  }
+
+  .category_gird-container__VMjQ7 > .category_grid-item__O9vRh:first-child {
+    background: #2cb0a1;
+    order: 1;
+  }
+
+  .category_gird-container__VMjQ7 > .category_grid-item__O9vRh:nth-child(2) {
+    background: #97f1e7;
+    order: 3;
+  }
+
+  .category_gird-container__VMjQ7 > .category_grid-item__O9vRh:nth-child(3) {
+    background: #31d8c5;
+    order: 6;
+  }
+
+  .category_gird-container__VMjQ7 > .category_grid-item__O9vRh:nth-child(4) {
+    background: #97f1e7;
+    order: 4;
+  }
+
+  .category_gird-container__VMjQ7 > .category_grid-item__O9vRh:nth-child(5) {
+    background: #2cb0a1;
+    order: 5;
+  }
+
+  .category_gird-container__VMjQ7 > .category_grid-item__O9vRh:nth-child(6) {
+    background: #31d8c5;
+    order: 2;
+  }
+
+  .category_gird-container__VMjQ7 > .category_grid-item__O9vRh:nth-child(7) {
+    background: #97f1e7;
+    order: 7;
+  }
+
+  .category_gird-container__VMjQ7 > .category_grid-item__O9vRh:nth-child(8) {
+    background: #2cb0a1;
+  }
+
+  .category_category-name__v0x9J {
+    width: 80%;
+    position: absolute;
+    color: #fff;
+    bottom: 4%;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    font-size: 2.5vw;
+    line-height: 1.1;
+  }
+
+  .category_web-show__zA4ZF {
+    display: none;
+  }
+
+  @media (min-width: 992px) {
+    .category_container__sxJ_9,
+    .category_gird-container__VMjQ7 {
+      padding-top: 3vw;
+      padding-bottom: 3vw;
+    }
+
+    .category_gird-container__VMjQ7 {
+      display: grid;
+      grid-row-gap: 0.8vw;
+      row-gap: 0.8vw;
+      grid-column-gap: 0.8vw;
+      -moz-column-gap: 0.8vw;
+      column-gap: 0.8vw;
+      position: relative;
+      margin-top: 0;
+      grid-template-columns: repeat(33, 1fr);
+      grid-template-rows: repeat(49, 1fr);
+    }
+
+    .category_gird-container__VMjQ7 .category_grid-item__O9vRh {
+      width: auto;
+      height: auto;
+      margin-bottom: 0;
+    }
+
+    .category_gird-container__VMjQ7
+      .category_grid-item__O9vRh.category_category-no-data__Ks_Ox {
+      display: block;
+    }
+
+    .category_gird-container__VMjQ7 > .category_grid-item__O9vRh:first-child {
+      grid-row: 1/31;
+      grid-column: 1/17;
+    }
+
+    .category_gird-container__VMjQ7 > .category_grid-item__O9vRh:nth-child(2) {
+      grid-row: 1/22;
+      grid-column: 17/27;
+    }
+
+    .category_gird-container__VMjQ7 > .category_grid-item__O9vRh:nth-child(3) {
+      grid-column: 27/34;
+      grid-row: 1/20;
+    }
+
+    .category_gird-container__VMjQ7
+      > .category_grid-item__O9vRh:nth-child(3)
+      .category_category-name__v0x9J {
+      bottom: auto;
+      top: 6%;
+    }
+
+    .category_gird-container__VMjQ7 > .category_grid-item__O9vRh:nth-child(4) {
+      grid-column: 1/9;
+      grid-row: 31/50;
+    }
+
+    .category_gird-container__VMjQ7 > .category_grid-item__O9vRh:nth-child(5) {
+      grid-column: 9/17;
+      grid-row: 31/50;
+    }
+
+    .category_gird-container__VMjQ7 > .category_grid-item__O9vRh:nth-child(6) {
+      grid-row: 22/50;
+      grid-column: 17/27;
+    }
+
+    .category_gird-container__VMjQ7 > .category_grid-item__O9vRh:nth-child(7) {
+      grid-column: 27/34;
+      grid-row: 20/35;
+    }
+
+    .category_gird-container__VMjQ7 > .category_grid-item__O9vRh:nth-child(8) {
+      grid-column: 27/34;
+      grid-row: 35/50;
+    }
+
+    .category_gird-container__VMjQ7
+      > .category_grid-item__O9vRh:nth-child(8)
+      .category_category-name__v0x9J {
+      bottom: auto;
+      top: 6%;
+    }
+
+    .category_category-name__v0x9J {
+      font-size: 1.15vw;
+    }
+
+    .category_web-show__zA4ZF {
+      display: block;
+    }
+
+    .category_mobile-show__wvEZC {
+      display: none;
+    }
+  }
+</style>
+
+<section
+  class="container-full category_section-area__UewGt category_container__sxJ_9"
+>
+  <div class="category_gird-container__VMjQ7">
+    <div class="category_grid-item__O9vRh">
+      <a href="#"
+        ><img
+          class="category_web-show__zA4ZF"
+          src="https://cdn.shopify.com/s/files/1/0619/2585/1382/files/anmol601.png?v=1711018854"
+          alt="Computer Memory" /><img
+          class="category_mobile-show__wvEZC"
+          src="https://cdn.shopify.com/s/files/1/0619/2585/1382/files/anmolrattanMobile.png?v=1711019304"
+          alt="Computer Memory" />
+        <div class="category_category-name__v0x9J"></div
+      ></a>
+    </div>
+    <div class="category_grid-item__O9vRh">
+      <a href="/in/consumer/category/external-ssds-and-hard-drives/"
+        ><img
+          class="category_web-show__zA4ZF"
+          src="https://cdn.shopify.com/s/files/1/0619/2585/1382/files/Adapter_web.png?v=1711019658"
+          alt="External SSDs / External Hard Drives"
+        /><img
+          class="category_mobile-show__wvEZC"
+          src="https://cdn.shopify.com/s/files/1/0619/2585/1382/files/Adapter_Mobile.png?v=1711019658"
+          alt="External SSDs / External Hard Drives"
+        />
+        <div class="category_category-name__v0x9J">
+          <!-- External SSDs / External Hard Drives -->
+        </div></a
+      >
+    </div>
+    <div class="category_grid-item__O9vRh">
+      <a href="#"
+        ><img
+          class="category_web-show__zA4ZF"
+          src="https://cdn.shopify.com/s/files/1/0619/2585/1382/files/Blaze_Web_and_mobile.png?v=1711019801"
+          alt="Power Banks"
+        /><img
+          class="category_mobile-show__wvEZC"
+          src="https://cdn.shopify.com/s/files/1/0619/2585/1382/files/Blaze_Web_and_mobile.png?v=1711019801"
+          alt="Power Banks"
+        />
+        <div class="category_category-name__v0x9J">
+          <!-- Power Banks -->
+          
+        </div></a
+      >
+    </div>
+    <div class="category_grid-item__O9vRh">
+      <a href="#"
+        ><img
+          class="category_web-show__zA4ZF"
+          src="https://cdn.shopify.com/s/files/1/0619/2585/1382/files/Bluetooth_speaker_Web.png?v=1711020161"
+          alt="USB Flash Drives"
+        /><img
+          class="category_mobile-show__wvEZC"
+          src="https://cdn.shopify.com/s/files/1/0619/2585/1382/files/Bluetooth_speaker_Web.png?v=1711020161"
+          alt="USB Flash Drives"
+        />
+        <div class="category_category-name__v0x9J">
+          <!-- USB Flash Drives -->
+
+        </div></a
+      >
+    </div>
+    <div class="category_grid-item__O9vRh">
+      <a href="#"
+        ><img
+          class="category_web-show__zA4ZF"
+          src="https://cdn.shopify.com/s/files/1/0619/2585/1382/files/memory_web.png?v=1711020477"
+          alt="Memory Cards"
+        /><img
+          class="category_mobile-show__wvEZC"
+          src="https://cdn.shopify.com/s/files/1/0619/2585/1382/files/memory_mobile.png?v=1711020478"
+          alt="Memory Cards"
+        />
+        <div class="category_category-name__v0x9J">
+          <!-- Memory Cards
+         -->
+        </div></a
+      >
+    </div>
+    <div class="category_grid-item__O9vRh">
+      <a href="#"
+        ><img
+          class="category_web-show__zA4ZF"
+          src="https://cdn.shopify.com/s/files/1/0619/2585/1382/files/Keyboard_Web.png?v=1711021108"
+          alt="SSDs"
+        /><img
+          class="category_mobile-show__wvEZC"
+          src="https://cdn.shopify.com/s/files/1/0619/2585/1382/files/Keyboard_Web_Edited.png?v=1711021108"
+          alt="SSDs"
+        />
+        <div class="category_category-name__v0x9J">
+          <!-- SSDs -->
+        </div></a>
+    </div>
+    <div class="category_grid-item__O9vRh">
+      <a href="#"
+        ><img
+          class="category_web-show__zA4ZF"
+          src="https://cdn.shopify.com/s/files/1/0619/2585/1382/files/Battery_Web.png?v=1711020957"
+          alt="USB Cables"
+        /><img
+          class="category_mobile-show__wvEZC"
+          src="https://cdn.shopify.com/s/files/1/0619/2585/1382/files/Battery_Mobile.png?v=1711020957"
+          alt="USB Cables"
+        />
+        <div class="category_category-name__v0x9J">
+          <!-- USB Cables -->
+        </div></a
+      >
+    </div>
+    <div class="category_grid-item__O9vRh category_category-no-data__Ks_Ox">
+      <div class="category_category-name__v0x9J"></div>
+      <a href="#"
+        ><img
+          class="category_web-show__zA4ZF"
+          src="https://cdn.shopify.com/s/files/1/0619/2585/1382/files/memory_web.png?v=1711020477"
+          alt="USB Cables"
+        /><img
+          class="category_mobile-show__wvEZC"
+          src="https://cdn.shopify.com/s/files/1/0619/2585/1382/files/memory_mobile.png?v=1711020478"
+          alt="USB Cables"
+        />
+      
+    </div>
+  </div>
+</section>
