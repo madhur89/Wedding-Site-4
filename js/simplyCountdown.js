@@ -108,7 +108,7 @@
 
         // Set the target date to 45 days from now
         var currentDate = new Date();
-        currentDate.setDate(currentDate.getDate() + 1);
+        // currentDate.setDate(currentDate.getDate() + 1);
 
         var interval,
             targetDate,
